@@ -2,7 +2,7 @@
 # Real-Time Customer CDC & Streaming Data Platform
 
 **Author:** Data Engineering Portfolio Project  
-**Target Role:** Data Engineer / Trainee-Analyst (Tiger Analytics Competency Aligned)  
+**Target Role:** Data Engineer / Streaming Data Analyst (Enterprise Production Aligned)  
 **Execution Environment:** 100% Local Containerized Environment (Docker Compose)  
 **Status:** Complete, Verified, and Empirically Benchmarked  
 
@@ -22,7 +22,7 @@
 11. [Pipeline Orchestration (Apache Airflow)](#11-pipeline-orchestration-apache-airflow)
 12. [Empirical Performance Benchmarks](#12-empirical-performance-benchmarks)
 13. [Quality Assurance & Automated Test Suite](#13-quality-assurance--automated-test-suite)
-14. [Tiger Analytics Competency Mapping & Interview Defense](#14-tiger-analytics-competency-mapping--interview-defense)
+14. [Core Data Engineering Competency Mapping & Interview Defense](#14-core-data-engineering-competency-mapping--interview-defense)
 15. [Project Verification & Operational Runbook](#15-project-verification--operational-runbook)
 
 ---
@@ -440,13 +440,13 @@ tests/test_validation.py::test_cdc_event_envelope_validation PASSED           [1
 
 ---
 
-## 14. Tiger Analytics Competency Mapping & Interview Defense
+## 14. Core Data Engineering Competency Mapping & Interview Defense
 
-This project demonstrates proficiency across the core competencies outlined in the Tiger Analytics Data Engineer / Trainee-Analyst job description:
+This project demonstrates proficiency across enterprise core competencies expected in modern Data Engineer & Streaming Data Analyst roles:
 
 ### 14.1 Core Competency Matrix
 
-| Tiger Analytics Requirement | Platform Implementation & Defense |
+| Core Competency Requirement | Platform Implementation & Defense |
 | :--- | :--- |
 | **Scalable Ingestion** | Debezium captures Postgres WAL changes with zero table-locking overhead. Kafka buffers events across 3 partitions. |
 | **Real-Time Streaming** | Spark Structured Streaming consumes Kafka micro-batches every 5 seconds with checkpoint recovery. |

@@ -15,7 +15,7 @@
 
 > **An enterprise-grade, 100% local streaming data engineering platform** built to demonstrate scalable real-time ingestion, Change Data Capture (CDC), distributed stream processing, data harmonization, automated data quality enforcement, dead-letter queue (DLQ) routing, Medallion data lake storage, and sub-second analytical querying.
 > 
-> *Directly aligned with core competencies expected in the Tiger Analytics Data Engineer & Trainee-Analyst roles.*
+> *Directly aligned with core competencies expected in Enterprise Data Engineer & Streaming Data Analyst roles.*
 
 ---
 
@@ -31,7 +31,7 @@
 - [9. Empirical Performance Benchmarks](#9-empirical-performance-benchmarks)
 - [10. Quality Assurance & Automated Testing](#10-quality-assurance--automated-testing)
 - [11. Airflow Batch ETL & Governance](#11-airflow-batch-etl--governance)
-- [12. Tiger Analytics Competency Mapping](#12-tiger-analytics-competency-mapping)
+- [12. Core Data Engineering Competency Mapping](#12-core-data-engineering-competency-mapping)
 - [13. Troubleshooting & Diagnostics](#13-troubleshooting--diagnostics)
 
 ---
@@ -400,9 +400,9 @@ Airflow operates as the batch orchestrator:
 
 ---
 
-## 12. Tiger Analytics Competency Mapping
+## 12. Core Data Engineering Competency Mapping
 
-| Tiger Analytics Competency | Platform Implementation & Defense |
+| Core Competency | Platform Implementation & Defense |
 | :--- | :--- |
 | **Scalable Ingestion** | Debezium captures Postgres WAL changes with zero table-locking overhead. Kafka buffers events across 3 partitions. |
 | **Real-Time Streaming** | Spark Structured Streaming consumes Kafka micro-batches every 5 seconds with checkpoint recovery. |

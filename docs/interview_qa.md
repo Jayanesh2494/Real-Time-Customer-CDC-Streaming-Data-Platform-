@@ -1,6 +1,6 @@
 # Data Engineering Interview Guide: Real-Time CDC & Streaming Platform
 
-Comprehensive defense guide covering the 10 architecture questions and 20 advanced system design scenarios expected in the Tiger Analytics Data Engineer / Trainee-Analyst interviews.
+Comprehensive defense guide covering the 10 architecture questions and 20 advanced system design scenarios expected in Enterprise Data Engineer & Streaming Data Analyst technical interviews.
 
 ---
 
