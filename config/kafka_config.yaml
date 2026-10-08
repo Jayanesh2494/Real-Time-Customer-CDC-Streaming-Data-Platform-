@@ -1,0 +1,21 @@
+kafka:
+  bootstrap_servers: "localhost:29092"
+  internal_bootstrap_servers: "kafka:9092"
+  client_id: "ecommerce-cdc-client"
+  topics:
+    customer_events: "ecommerce.public.customers"
+    product_events: "ecommerce.public.products"
+    order_events: "ecommerce.public.orders"
+    order_item_events: "ecommerce.public.order_items"
+    payment_events: "ecommerce.public.payments"
+    dlq_events: "ecommerce.dlq.errors"
+  topic_defaults:
+    partitions: 3
+    replication_factor: 1
+    retention_ms: 604800000  # 7 days
+    cleanup_policy: "delete"
+  consumer:
+    group_id_prefix: "spark-cdc-"
+    auto_offset_reset: "earliest"
+    enable_auto_commit: false
+    max_poll_records: 500

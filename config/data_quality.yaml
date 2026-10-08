@@ -1,0 +1,40 @@
+rules:
+  customers:
+    primary_key: "customer_id"
+    required_fields: ["customer_id", "email", "first_name", "last_name"]
+    email_regex: "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+    allowed_operations: ["c", "u", "d", "r"]
+
+  products:
+    primary_key: "product_id"
+    required_fields: ["product_id", "product_name", "category", "price", "stock_quantity"]
+    numeric_ranges:
+      price:
+        min: 0.0
+      stock_quantity:
+        min: 0
+    allowed_operations: ["c", "u", "d", "r"]
+
+  orders:
+    primary_key: "order_id"
+    required_fields: ["order_id", "customer_id", "order_status", "total_amount"]
+    numeric_ranges:
+      total_amount:
+        min: 0.0
+    allowed_statuses: ["PLACED", "CONFIRMED", "PROCESSING", "SHIPPED", "DELIVERED", "CANCELLED", "REFUNDED"]
+    allowed_operations: ["c", "u", "d", "r"]
+
+  payments:
+    primary_key: "payment_id"
+    required_fields: ["payment_id", "order_id", "payment_method", "payment_status", "payment_amount"]
+    numeric_ranges:
+      payment_amount:
+        min: 0.0
+    allowed_methods: ["CREDIT_CARD", "DEBIT_CARD", "UPI", "NET_BANKING", "WALLET", "COD"]
+    allowed_statuses: ["SUCCESS", "PENDING", "FAILED", "REFUNDED"]
+    allowed_operations: ["c", "u", "d", "r"]
+
+dead_letter_queue:
+  kafka_topic: "ecommerce.dlq.errors"
+  lake_path: "errors/"
+  alert_threshold_percentage: 5.0

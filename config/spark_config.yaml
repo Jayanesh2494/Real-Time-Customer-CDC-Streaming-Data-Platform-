@@ -1,0 +1,26 @@
+spark:
+  app_name: "EcommerceCDCStreaming"
+  master: "local[*]"
+  streaming:
+    trigger_interval: "5 seconds"
+    checkpoint_dir: "/tmp/spark-checkpoints"
+    watermark_delay: "10 minutes"
+  s3:
+    endpoint: "http://minio:9000"
+    access_key: "admin"
+    secret_key: "password123"
+    bucket: "ecommerce-data"
+    path_style_access: "true"
+    impl: "org.apache.hadoop.fs.s3a.S3AFileSystem"
+  paths:
+    bronze: "s3a://ecommerce-data/bronze"
+    silver: "s3a://ecommerce-data/silver"
+    gold: "s3a://ecommerce-data/gold"
+    errors: "s3a://ecommerce-data/errors"
+    local_bronze: "data/bronze"
+    local_silver: "data/silver"
+    local_gold: "data/gold"
+    local_errors: "data/errors"
+  batch:
+    shuffle_partitions: 4
+    default_parallelism: 4
